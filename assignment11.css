@@ -1,0 +1,19 @@
+/* Root element */
+students {
+    display: block;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Each student as separate block */
+student {
+    display: block;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Each field on new line */
+id, name, age, department, email {
+    display: block;
+}
