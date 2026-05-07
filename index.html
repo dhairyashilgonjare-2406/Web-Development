@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Web Journal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    color:white;
+    min-height:100vh;
+}
+
+/* ========================= */
+/* PROFILE SECTION */
+/* ========================= */
+
+.profile-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.profile-card{
+    width:420px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.profile-img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#ff9966,#ff5e62);
+    margin:auto;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.profile-card h1{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.info{
+    margin-top:25px;
+    text-align:left;
+}
+
+.info p{
+    margin:14px 0;
+    padding:12px;
+    background:rgba(255,255,255,0.07);
+    border-radius:10px;
+    font-size:15px;
+}
+
+.info span{
+    color:#ffcc70;
+    font-weight:600;
+}
+
+.scroll-btn{
+    margin-top:30px;
+}
+
+.scroll-btn a{
+    text-decoration:none;
+    background:#ffcc70;
+    color:#111827;
+    padding:12px 28px;
+    border-radius:12px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.scroll-btn a:hover{
+    background:white;
+}
+
+/* ========================= */
+/* EXPERIMENT SECTION */
+/* ========================= */
+
+.experiment-section{
+    padding:50px 40px;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header h1{
+    font-size:42px;
+    background:linear-gradient(to right,#ffcc70,#ff8177);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+/* CARD */
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:22px;
+    position:relative;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ffcc70;
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.tag{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:linear-gradient(45deg,#ff8177,#ffcc70);
+    color:#111827;
+    padding:6px 12px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.card h3{
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+.card a{
+    text-decoration:none;
+    background:#ffcc70;
+    color:#111827;
+    padding:10px 18px;
+    border-radius:10px;
+    display:inline-block;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.card a:hover{
+    background:white;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    margin-top:50px;
+    color:#d1d5db;
+    padding-bottom:20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .profile-card{
+        width:100%;
+    }
+
+    .header h1{
+        font-size:32px;
+    }
+
+    .experiment-section{
+        padding:30px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- PROFILE SECTION -->
+<!-- ========================= -->
+
+<section class="profile-section">
+
+    <div class="profile-card">
+
+        <div class="profile-img">
+            CW
+        </div>
+
+        <h1>Student Profile</h1>
+
+        <div class="info">
+            <p><span>Name :</span> Dhairyashil Gonjare</p>
+            <p><span>Year :</span> 2025-26</p>
+            <p><span>Batch :</span> S1</p>
+            <p><span>Roll No :</span> 05</p>
+        </div>
+
+        <div class="scroll-btn">
+            <a href="#experiments">View Experiments</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- EXPERIMENT SECTION -->
+<!-- ========================= -->
+
+<section class="experiment-section" id="experiments">
+
+    <div class="header">
+        <h1>Web Development Experiments</h1>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <span class="tag">A2</span>
+            <h3>Static Page</h3>
+            <a href="assignment2.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A3</span>
+            <h3>Text Formatting</h3>
+            <a href="assignment3.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A4</span>
+            <h3>Lists</h3>
+            <a href="assignment4.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A5</span>
+            <h3>Images</h3>
+            <a href="assignment35.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A6</span>
+            <h3>Frames</h3>
+            <a href="assignment6.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A7</span>
+            <h3>Links</h3>
+            <a href="assignment7.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A8</span>
+            <h3>Timetable</h3>
+            <a href="assignment8.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A9</span>
+            <h3>Employee Registration</h3>
+            <a href="assignment9.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A10</span>
+            <h3>Resume</h3>
+            <a href="10resume.html">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A11</span>
+            <h3>EXP11</h3>
+            <a href="EXP11/assignment11.xml">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A12</span>
+            <h3>EXP12</h3>
+            <a href="EXP12/booklibrary.xml">Open</a>
+        </div>
+
+        <div class="card">
+            <span class="tag">A13</span>
+            <h3>EXP13</h3>
+            <a href="EXP13/Exp13/examrecords.xml">Open</a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 Web Tech Journal
+    </div>
+
+</section>
+
+</body>
+</html>
