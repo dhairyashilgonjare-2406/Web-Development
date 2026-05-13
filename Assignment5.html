@@ -1,47 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Experiment 5</title>
-  </head>
-  <body>
-    <div>
-      <h1>Smriti Mandhana</h1>
+<head>
+<title>HTML Image Tag Examples</title>
+<link rel="stylesheet" href="nav-style.css">
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9ff;
+        color: #2d3748;
+    }
+    .experiment-container {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        color: #667eea;
+        margin-top: 2rem;
+    }
+    img {
+        border-radius: 8px;
+        margin: 1rem 0;
+    }
+    figure {
+        text-align: center;
+        margin: 2rem 0;
+    }
+    figcaption {
+        color: #718096;
+        font-style: italic;
+        margin-top: 0.5rem;
+    }
+</style>
+</head>
 
-      <img src="smriti.jpg" height="300" alt="Smriti Mandhana" />
+<body>
+    <nav class="nav-header">
+        <h2 class="nav-title">🖼️ Experiment 5 - Image Tags</h2>
+        <div class="nav-buttons">
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </nav>
 
-      <p>
-        <strong>Smriti Mandhana</strong> is an
-        <u>Indian international cricketer</u> and one of the top opening batters
-        in women’s cricket. She is widely known for her elegant
-        <i>left-handed batting style</i> and consistent performances at the
-        international level.
-      </p>
+    <div class="experiment-container">
+<b>
+<h3>Name: Dhairyashil Gonjare</h3>
+<h3>Roll no: 05</h3>
+<h3>Experiment no: 5</h3>
+</b>
 
-      <h2>Basic Information</h2>
+<h2>1. Basic Image</h2>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+alt="Sunset over ocean" width="400" height="300">
 
-      <ul>
-        <li><strong>Full Name:</strong> Smriti Mandhana</li>
-        <li><strong>Date of Birth:</strong> 28 July 1996</li>
-        <li><strong>Role:</strong> Opening Batter</li>
-        <li><strong>Batting Style:</strong> Left-handed</li>
-        <li>
-          <strong>Recognition:</strong> Award-winning international cricketer
-        </li>
-      </ul>
+<h2>2. Image with Width and Height</h2>
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+alt="Nature Image" width="300" height="200">
 
-      <h2>Career Highlights</h2>
+<h2>3. Image with Title (Tooltip)</h2>
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a"
+alt="Dog Image" title="Cute Dog" width="200">
 
-      <p>
-        Mandhana has represented India in all formats of cricket and has played
-        important roles in international tournaments. Her performances have
-        earned her global recognition and she continues to inspire young
-        athletes through her dedication and skill.
-        <a
-          href="https://www.bing.com/ck/a?!&&p=f67f29de15f5a5027fb419f0c93a01dd0910c698354baa87e73bc5763867fedbJmltdHM9MTc3MTYzMjAwMA&ptn=3&ver=2&hsh=4&fclid=0a6bcea9-8501-629a-17ff-d85684cf639e&psq=smriti+mandhana+instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zbXJpdGlfbWFuZGhhbmEv"
-          >Instagram</a
-        >
-      </p>
+<h2>4. Image with Border (CSS)</h2>
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+alt="Border Image" style="border:3px solid black;" width="200">
+
+<h2>5. Image as a Link</h2>
+<a href="https://unsplash.com/s/photos/tropical-sunset" target="_blank">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+alt="Clickable Sunset" width="200">
+</a>
+
+<h2>6. Responsive Image</h2>
+<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
+alt="Responsive Landscape" style="max-width:100%; height:auto;">
+
+<h2>7. Image Alignment</h2>
+<img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d"
+alt="Right Aligned Sun" style="float:right;" width="200" height="150">
+<p>This text wraps around the image.</p>
+
+<br><br><br>
+
+<h2>8. Image with Caption (Figure Tag)</h2>
+<figure>
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" width="300">
+<figcaption>This is a nature image caption.</figcaption>
+</figure>
     </div>
-  </body>
+
+    <footer class="exp-footer">
+        <p>&copy; 2024 Web Development Lab | 
+            <a href="index.html">Home</a>
+        </p>
+    </footer>
+</body>
 </html>
