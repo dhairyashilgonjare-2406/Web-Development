@@ -1,205 +1,115 @@
+<!--form for student-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Employee Registration</title>
-<link rel="stylesheet" href="../nav-style.css">
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', sans-serif;
-        background: #0d1117;
-        color: #e6edf3;
-    }
-
-    .form-wrapper {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    .container {
-        width: 520px;
-        background: #161b22;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.6);
-        margin: 40px auto;
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #58a6ff;
-    }
-
-    label {
-        display: block;
-        margin-top: 12px;
-        font-size: 14px;
-        color: #c9d1d9;
-    }
-
-    input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border-radius: 6px;
-        border: 1px solid #30363d;
-        background: #0d1117;
-        color: #e6edf3;
-        outline: none;
-        transition: 0.3s;
-    }
-
-    input:focus, select:focus, textarea:focus {
-        border-color: #58a6ff;
-        box-shadow: 0 0 5px #58a6ff;
-    }
-
-    .row {
-        display: flex;
-        gap: 15px;
-    }
-
-    .input-group {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .radio-group, .checkbox-group {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        margin-top: 5px;
-    }
-
-    .radio-group label,
-    .checkbox-group label {
-        font-size: 13px;
-    }
-
-    button {
-        width: 100%;
-        margin-top: 25px;
-        padding: 12px;
-        border: none;
-        border-radius: 8px;
-        background: #238636;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    button:hover {
-        background: #2ea043;
-    }
-
-    ::placeholder {
-        color: #8b949e;
-    }
-
-    @media (max-width: 600px) {
-        .row {
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            padding: 30px;
         }
-    }
 
-</style>
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="form-wrapper">
-        <nav class="nav-header">
-            <h2 class="nav-title">📋 Experiment 9 - Employee Form</h2>
-            <div class="nav-buttons">
-                <a href="../index.html" class="back-btn">← Back to Home</a>
-            </div>
-        </nav>
 
-<div class="container">
-    <h2>Employee Registration</h2>
+    <h2>Student Registration Form</h2>
 
-    <form>
+    <form method="post">
+        <label>Full Name:</label>
+        <input type="text" placeholder="Full name" name="fullname"><br><br>
 
-        <!-- Name -->
-        <div class="row">
-            <div class="input-group">
-                <label>First Name</label>
-                <input type="text" placeholder="First Name">
-            </div>
-            <div class="input-group">
-                <label>Last Name</label>
-                <input type="text" placeholder="Last Name">
-            </div>
-        </div>
+        <label>Email:</label>
+        <input type="email" placeholder="E-mail"  name="email"><br><br>
 
-        <!-- Contact -->
-        <label>Email</label>
-        <input type="email" placeholder="Enter Email">
+        <label>Password:</label>
+        <input type="password" placeholder="Password" name="password"><br><br>
 
-        <label>Phone</label>
-        <input type="tel" placeholder="Enter Phone">
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female</input>
+        <br><br>
 
-        <!-- Job Details -->
-        <label>Employee ID</label>
-        <input type="text" placeholder="Enter ID">
+        <label>Date of Birth:</label>
+        <input type="date" name="dob"><br><br>
 
-        <label>Department</label>
-        <select>
-            <option>Select Department</option>
-            <option>HR</option>
-            <option>IT</option>
-            <option>Finance</option>
-            <option>Marketing</option>
+        <label>Mobile Number:</label>
+        <input type="tel" palceholder="Moblie Number"  name="mobile"><br><br>
+
+        <label>Course:</label>
+        <select name="course">
+            <option>BCA</option>
+            <option>BSc</option>
+            <option>BTech</option>
+            <option>BCom</option>
+            <option>BBA</option>
         </select>
+        <br><br>
 
-        <label>Position</label>
-        <input type="text" placeholder="Job Title">
+        <label>Address:</label><br>
+        <textarea name="address" placeholder="Address" rows="4" cols="30"></textarea><br><br>
 
-        <!-- Gender -->
-        <label>Gender</label>
-        <div class="radio-group">
-            <label><input type="radio" name="g"> Male</label>
-            <label><input type="radio" name="g"> Female</label>
-            <label><input type="radio" name="g"> Other</label>
-        </div>
+        <label>Hobbies:</label>
+        <input type="checkbox" name="hobby" value="Reading"> Reading
+        <input type="checkbox" name="hobby" value="Sports"> Sports
+        <input type="checkbox" name="hobby" value="Music"> Music
+        <br><br>
 
-        <!-- Skills -->
-        <label>Skills</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox"> Communication</label>
-            <label><input type="checkbox"> Leadership</label>
-            <label><input type="checkbox"> Coding</label>
-        </div>
-
-        <!-- Joining Date -->
-        <label>Joining Date</label>
-        <input type="date">
-
-        <!-- Upload -->
-        <label>Upload Resume</label>
-        <input type="file">
-
-        <!-- Address -->
-        <label>Address</label>
-        <textarea rows="3" placeholder="Enter Address"></textarea>
-
-        <!-- Submit -->
-        <button type="submit">Register</button>
-
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
     </form>
-</div>
-    </div>
 
-<footer class="exp-footer">
-    <p>&copy; 2024 Web Development Lab | 
-        <a href="../index.html">Home</a>
-    </p>
-</footer>
 </body>
 </html>
